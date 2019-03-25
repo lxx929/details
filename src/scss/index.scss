@@ -1,0 +1,74 @@
+@import "_minix.scss";
+@import "common.scss";
+html,
+body,
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper {
+    @include box_flex;
+    @include direction(column);
+    @include justify(space-between);
+}
+
+header {
+    width: 100%;
+    height: pxTorem(44px);
+    background: lavender;
+    text-align: center;
+    @include box_flex;
+    @include justify(center);
+    @include align;
+}
+
+section {
+    width: 100%;
+    @include flex;
+    .content {
+        width: 100%;
+        height: 100%;
+        padding: 0 pxTorem(15px);
+        background: lavenderblush;
+        @include sizing;
+        ul {
+            li {
+                padding: pxTorem(10px) 0;
+                border-bottom: pxTorem(1px) solid #999;
+                p {
+                    >img {
+                        border-radius: 50%;
+                    }
+                    span {}
+                }
+                .info {
+                    @include box_flex;
+                    @include justify(space-between);
+                    @include align;
+                    .left {
+                        width: 60%;
+                    }
+                    >img {
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: pxTorem(50px);
+    padding: 0 pxTorem(15px);
+    background: lavender;
+    @include sizing;
+    ul {
+        width: 100%;
+        height: 100%;
+        @include box_flex;
+        @include align;
+        @include justify(space-between);
+    }
+}
